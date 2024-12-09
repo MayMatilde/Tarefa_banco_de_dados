@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}">
+    <title>Cadastro de Livros, Autores e Categorias</title>
+</head>
+<body>
+    <!-- Formulário de Cadastro de Livros -->
+    <div class="form-container">
+        <form action="{{url_for('books.acesso')}}" method="POST">
+        <h2>Cadastro de Livros</h2>
+            <div class="form-group">
+                <label for="titulo">Título do Livro</label>
+                <input type="text" name="titulo" placeholder="Digite o título do livro" required>
+            </div>
+            <div class="form-group">
+                <label for="isbn">ISBN</label>
+                <input type="text" name="isbn" placeholder="Digite o ISBN" required>
+            </div>
+            <div class="form-group">
+                <label for="data_publicacao">Data de Publicação</label>
+                <input type="date" name="data_publi" required>
+            </div>
+            <div class="form-group">
+                <label for="numero_paginas">Número de Páginas</label>
+                <input type="number" name="numero_paginas" placeholder="Digite o número de páginas" required>
+            </div>
+            <div class="form-group">
+                <label for="autor">Autor do Livro</label>
+                <input type="text" name="autor" placeholder="Digite o nome do autor" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoria do Livro:</label>
+                <input type="text" name="categoria" placeholder="Ex: Ficção">
+            </div>
+            <button type="submit">Cadastrar Livro</button>
+        </form>
+    </div>
+</body>
+</html>
