@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Dados - Livros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao World of Books!!</h1>
+        <div class="links">
+            <a href="{{ url_for('books.acessoAutor') }}" class="btn">Acessar</a>
+            <a href="{{ url_for('books.lista') }}" class="btn">Acessar a lista de livros</a>
+        </div>
+    </div>
+</body>
+</html>
